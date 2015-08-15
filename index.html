@@ -12,12 +12,16 @@ title: Home
   </h2>
 
   <div class='post'>
-    <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
-    <div class='body'>{{ site.posts.first.content }}</div>
+  {% for post in site.posts %}
+
+{{ post.date|date_to_string }} <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+
+{% endfor %}
+   
   </div>
 </div>
 <div class='home_box' id='home_right'>
-  <h2>Featured Projects</h2>
+
 
   <div id='github-projects'>
   </div>
