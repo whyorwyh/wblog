@@ -1,0 +1,4 @@
+baseurl: /blogdemo
+markdown: rdiscount
+highlighter: pygments
+encoding: utf-8
