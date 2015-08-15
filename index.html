@@ -12,12 +12,9 @@ title: Home
   </h2>
 
   <div class='post'>
-  {% for post in site.posts %}
 
-{{ post.date|date_to_string }} <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
-
-{% endfor %}
-   
+    <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
+    <div class='body'>{{ site.posts.first.content }}</div>
   </div>
 </div>
 <div class='home_box' id='home_right'>
