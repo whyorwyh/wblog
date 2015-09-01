@@ -1,25 +1,26 @@
 ---
 layout: master
-title: Home
+title: index
 ---
-
 <div class='home_box' id='home_left'>
   <h2>
     Latest Post
-    <span class="more">(<a href='/archive.html'>Archive</a>)</span>
-    <span class="more">(<a href='/howto.html'>Howto</a>)</span>
-    <span class="more">(<a href='/atom.xml'>Feed</a>)</span>
+    <span class="more">(<a href='{{ site.baseurl }}/archive.html'>Archive</a>)</span>
+ <!-- <span class="more">(<a href='{{ site.baseurl }}/tags.html'>Tags</a>)</span>-->
+    <span class="more">(<a href='{{ site.baseurl }}/categories.html'>catetegories</a>)</span>
   </h2>
-
+	<div id='tag_cloud' class="tags">
+	<h2>Tags:</h2>
+				{% for tag in site.tags %}
+				<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+				{% endfor %}
+			</div>
   <div class='post'>
-
-    <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
+    <h2><a href='{{ site.baseurl }}{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h2>
     <div class='body'>{{ site.posts.first.content }}</div>
   </div>
 </div>
 <div class='home_box' id='home_right'>
-
-
   <div id='github-projects'>
   </div>
 </div>

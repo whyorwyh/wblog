@@ -1,4 +1,7 @@
-baseurl: /blogdemo
+baseurl: /wblog
 markdown: rdiscount
-highlighter: pygments
 encoding: utf-8
+comments :
+provider : duoshuo
+duoshuo : 
+shortname : why2015

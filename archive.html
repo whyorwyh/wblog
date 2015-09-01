@@ -1,0 +1,16 @@
+---
+layout: master
+title: archive
+---
+<div id='archive'>
+{% for post in site.posts %}
+{{ post.date|date_to_string }} <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+<br/>
+{% endfor %}
+<script>
+	var dataStr = '{ {% for tag in site.tags %}{% if tag[0] != site.tags.first[0] %},{% endif %}"{{ tag[0] }}":[{% for post in tag[1] %}{% if post != tag[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+    data = JSON.parse(dataStr),
+    curTag = $.query.get("tag"),
+    archieves = data[curTag];
+</script>
+</div>

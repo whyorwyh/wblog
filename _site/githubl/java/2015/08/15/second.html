@@ -2,20 +2,47 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Wyh - {{ page.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/master.css" type="text/css" media="screen" charset="utf-8"/>
-	 <link rel="stylesheet" href="{{ site.baseurl }}/css/pygments.css" type="text/css" media="screen" />
+    <title>Wyh - 我的第二篇文章</title>
+    <link rel="stylesheet" href="/wblog/css/master.css" type="text/css" media="screen" charset="utf-8"/>
+	 <link rel="stylesheet" href="/wblog/css/pygments.css" type="text/css" media="screen" />
   </head>
   <body>
     <div id='wrapper'>
       <div id='header'>
-        <h1><a href="{{ site.baseurl }}/index.html">Why</a></h1>
+        <h1><a href="/wblog/index.html">Why</a></h1>
       </div>
       <div id='content'>
-        {{ content }}		
+        <div class='post'>
+  <div class='date'>posted 15 Aug 2015</div>
+  <h1><a href='/wblog/githubl/java/2015/08/15/second.html'>我的第二篇文章</a></h1>
+  <div class='body'><h2>目录</h2>
+
+<ul>
+<li><a href="#partI">图一</a></li>
+<li><a href="#partII">图二</a></li>
+</ul>
+
+
+<hr />
+
+<h2>图一 <p id="partI"></p></h2>
+
+<p><img src="/wblog/images/img1.jpg" alt="" /></p>
+
+<hr />
+
+<h2>图二 <p id="partII"></p></h2>
+
+<p><img src="/wblog/images/img2.jpg" alt="" /></p>
+
+<hr />
+
+<p>15 Aug 2015</p>
+</div>
+</div>		
 		
 <!-- 多说评论框 start -->
-	<div class="ds-thread"  {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+	<div class="ds-thread"  data-thread-key="/githubl/java/2015/08/15/second"  data-title="我的第二篇文章 - "></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -56,7 +83,7 @@ var duoshuoQuery = {short_name:"why2015"};
   </script>
   <!--Google Analytics的跟踪代码end-->
   <script>
-  var dataStr = '{ {% for tag in site.tags %}{% if tag[0] != site.tags.first[0] %},{% endif %}"{{ tag[0] }}":[{% for post in tag[1] %}{% if post != tag[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+  var dataStr = '{ "jekyll":[{"url":"/jekyll/2015/08/10/first.html", "title":"我的第一篇文章", "date":"10/08/2015"}],"githubl":[{"url":"/githubl/java/2015/08/15/second.html", "title":"我的第二篇文章", "date":"15/08/2015"}],"python":[{"url":"/blog/2015/08/20/third.html", "title":"我的第三篇文章", "date":"20/08/2015"}],"git":[{"url":"/java/2015/08/25/fourth.html", "title":"我的第四篇文章", "date":"25/08/2015"}] }',
     data = JSON.parse(dataStr),
     curTag = $.query.get("tag"),
     archieves = data[curTag];
