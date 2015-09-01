@@ -3,11 +3,6 @@ body {
   background: url(../images/imgb.png);
   color:#000000;
 }
-/*
-img.right { 
-  float: right;
-  margin: 15px;
-}*/
 
 a {
   color: #3E423A;
@@ -28,7 +23,7 @@ a {
 }
 
 #header {
-  /*text-transform: lowercase;*/
+
   background: url(../images/header.png);
   -moz-border-radius-topleft: 1em;
   -webkit-border-top-left-radius: 1em;
@@ -65,7 +60,7 @@ a {
   margin-left: 0.5em;
   font-size: 2em;
   font-weight: normal;
- /* color: #BF7F30;*/
+
 }
 
 #archive {
@@ -85,8 +80,7 @@ a {
 }
 
 #tag_cloud a,
-#tag_cloud .tags {
-  border:2px solid transparent;
+#tag_cloud .tags,.categories  a{
    -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
@@ -103,8 +97,8 @@ a {
   text-decoration:none;
 }
 
-#tag_cloud a:hover,
-#tag_cloud a:active {
+#tag_cloud a:hover,.categories  a:hover,
+#tag_cloud a:active ,.categories  a:active{
   background-color: rgb(8, 8, 15) !important;
 }
 
@@ -118,8 +112,12 @@ a {
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   border:20px solid rgb(104, 114, 131);
+  
 }
 
+#content ul li{
+	list-style-type: none;
+}
 #content h2 {
   margin: 0 0 0.5em 0;
   color: white;
@@ -161,11 +159,7 @@ a {
 }
 
 .post br { margin-bottom: 10px;}
-/*
-div.related {
-  margin-bottom: 2em;
-}
-*/
+
 #footer  {
   margin: 0 auto 2em;
   color:rgb(104, 114, 131);
@@ -195,8 +189,16 @@ div.related {
   background: rgb(8, 8, 15);
  }
  /**/
+
 .post h2{
   background:rgb(104, 114, 131);
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;  
+  border-radius: 0.5em;
+  border-radius:0.5em;
+  padding:0.5em;
 }
 .home_box h2 a {
   color: white;
